@@ -250,7 +250,7 @@ como definitiva no projeto, por ser mais adequada ao caso de uso de
 formulário — decisão de produto tomada com base no resultado do teste,
 não assumida a priori.
 
-![Codigo Gerado](./Imagens/comparativo-gerado-fewxzero)
+![Codigo Gerado](./Imagens/comparativo-gerado-fewxzero.png)
 
 ---
 
@@ -297,9 +297,9 @@ funcionando anexados na entrega.
 
 ## Tabelas de Gastos Pós uso de Few-Shot e Zero-Shot (6f666178.. = Zero-Shot / b9e2345d.. = Few-Shot)
 
-![Gastos 1](./Imagens/tabela-pos-fewzero)
+![Gastos 1](./Imagens/tabela-pos-fewzero.png)
 
-![Gastos 2](./Imagens/gastos-pos-fewzxero2)
+![Gastos 2](./Imagens/gastos-pos-fewzxero2.png)
 
 ---
 
@@ -343,30 +343,30 @@ _[Pedro Paulo Barbosa Arantes - RA: 253622492]_
 
 ## Passo a passo que seguimos
 
-![Passo 1](./Imagens/passo-a-passo1)
-![Passo 2](./Imagens/passo-a-passo2)
+![Passo 1](./Imagens/passo-a-passo1.png)
+![Passo 2](./Imagens/passo-a-passo2.png)
 
 ### Curadoria
 
-![Passo 3](./Imagens/passo-a-passoCURADORIA1)
-![Passo 4](./Imagens/passo-a-passoCURADORIA2)
+![Passo 3](./Imagens/passo-a-passoCURADORIA1.png)
+![Passo 4](./Imagens/passo-a-passoCURADORIA2.png)
 
 ### Few x Zero
 
-![Passo 5](./Imagens/passo-a-passoFEWXZERO1)
-![Passo 6](./Imagens/passo-a-passoFEWXZERO2)
+![Passo 5](./Imagens/passo-a-passoFEWXZERO1.png)
+![Passo 6](./Imagens/passo-a-passoFEWXZERO2.png)
 
 ### Decisões system prompt e Técnica prompt
 
-![Passo 7](./Imagens/decisoes-systemprompt)
-![Passo 8](./Imagens/escopo-tecnicaprompt)
+![Passo 7](./Imagens/decisoes-systemprompt.png)
+![Passo 8](./Imagens/escopo-tecnicaprompt.png)
 
 ## Evolução do Projeto
 
-![Etapa 1](./Imagens/evolucao-projeto1)
-![Etapa 2](./Imagens/evolucao-projeto2)
-![Etapa 3](./Imagens/evolucao-projeto3)
-![Etapa 4](./Imagens/evolucao-projeto4)
-![Etapa 5](./Imagens/evolucao-projeto5)
-![Etapa 6](./Imagens/evolucao-projeto6)
-![Etapa 7](./Imagens/evolucao-projeto7finalizado)
+![Etapa 1](./Imagens/evolucao-projeto1.png)
+![Etapa 2](./Imagens/evolucao-projeto2.png)
+![Etapa 3](./Imagens/evolucao-projeto3.png)
+![Etapa 4](./Imagens/evolucao-projeto4.png)
+![Etapa 5](./Imagens/evolucao-projeto5.png)
+![Etapa 6](./Imagens/evolucao-projeto6.png)
+![Etapa 7](./Imagens/evolucao-projeto7finalizado.png)
