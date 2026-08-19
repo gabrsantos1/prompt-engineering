@@ -23,17 +23,8 @@ import {
   type DadosJogoForm,
 } from "@/lib/jogos/salvar-jogo";
 import { ordenarJogos, type CriterioOrdenacao } from "@/lib/jogos/ordenar";
+import { filtrarPorTitulo } from "@/lib/jogos/buscar";
 import type { Jogo, StatusJogo } from "@/types/jogo";
-
-// Remove acentos pra busca não depender de digitar exatamente igual
-// (ex: "pokemon" encontra "Pokémon"). U+0300-U+036F é a faixa Unicode
-// dos diacríticos combinantes que sobram depois do normalize("NFD").
-function normalizar(texto: string): string {
-  return texto
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-}
 
 // Estado do formulário modal de criar/editar — centralizado aqui pra um
 // único componente <FormularioJogoModal> servir tanto o botão "+
@@ -75,10 +66,7 @@ export function JogosProvider({ children }: { children: ReactNode }) {
     useState<EstadoFormulario>(null);
 
   const jogosFiltrados = useMemo(() => {
-    const termo = normalizar(termoBusca.trim());
-    const filtrados = termo
-      ? jogos.filter((jogo) => normalizar(jogo.titulo).includes(termo))
-      : jogos;
+    const filtrados = filtrarPorTitulo(jogos, termoBusca);
     return ordenarJogos(filtrados, criterioOrdenacao);
   }, [jogos, termoBusca, criterioOrdenacao]);
 
