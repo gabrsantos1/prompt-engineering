@@ -305,7 +305,7 @@ funcionando anexados na entrega.
 
 ## 6. Link da URL publicada
 
-_[preencher após o deploy — Vercel ou Cloudflare Pages]_
+prompt-engineering-red.vercel.app
 
 ---
 
