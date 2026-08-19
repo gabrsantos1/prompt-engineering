@@ -135,20 +135,15 @@ completos de objeto `Jogo` já formatados (few-shot).
 
 ### Zero-shot
 
-![Zero-Shot](./Imagens/zero-shot.png)
-
 Gerada sem nenhum exemplo — o modelo decidiu a estrutura do array
 sozinho, com base apenas na interface `Jogo` já definida no projeto.
 
 ### Few-shot
 
-_[inserir aqui o print/imagem da geração few-shot]_
-
 Gerada fornecendo 2 exemplos completos de objeto `Jogo` (Hollow Knight,
 Hades) no próprio prompt, pedindo que o modelo seguisse o mesmo padrão
 de estilo para os 7 jogos da lista.
 
-### Resultado da comparação
 
 Comparando os dois arquivos gerados linha a linha, o conteúdo dos dois
 arrays saiu **idêntico** (mesmos 7 jogos, mesma estrutura, mesma
@@ -187,20 +182,22 @@ as regras de nota e data de conclusão?"*
 
 ### Contexto completo (`@requisitos.md`)
 
-_[inserir aqui o print/imagem dessa versão]_
+![Contexto Completo](./Imagens/few-shot.png)
 
 O arquivo inteiro foi incluído via `@requisitos.md` (equivalente ao
 `@file` do Claude/Cursor).
 
 ### Contexto reduzido (trecho colado manualmente)
 
-_[inserir aqui o print/imagem dessa versão]_
+![Contexto Reduzido](./Imagens/zero-shot.png)
 
 Apenas o trecho relevante do `requisitos.md` (a tabela de campos do
 jogo + a seção de regras de negócio) foi selecionado e colado
 manualmente no prompt, sem usar `@file`.
 
 ### Resultado da comparação de tokens
+
+![Resultado da Comparacao](./Imagens/relatorio-geral-inicial.png)
 
 Isolando o turno da pergunta-teste (excluindo a mensagem inicial de
 carregamento de contexto, idêntica nas duas sessões):
@@ -253,6 +250,8 @@ como definitiva no projeto, por ser mais adequada ao caso de uso de
 formulário — decisão de produto tomada com base no resultado do teste,
 não assumida a priori.
 
+![Codigo Gerado](./Imagens/comparativo-gerado-fewxzero)
+
 ---
 
 ## 5. Tabela de chamadas, tokens e custo
@@ -261,6 +260,8 @@ O log completo de todas as chamadas de API feitas ao Claude Code durante
 a construção do projeto está em `logs/log_completo_atualizado.xlsx`
 (dados extraídos diretamente dos transcripts `.jsonl` do Claude Code,
 também incluídos em `logs/` para rastreabilidade).
+
+![CSV Gerado](./Imagens/logs-via-scripts.png)
 
 **Resumo:**
 
@@ -293,6 +294,12 @@ individual e cruzamento com a técnica de prompt usada em cada uma.
 **Evidência (prints/logs):** ver pasta `logs/` — planilha tratada,
 arquivos `.jsonl` originais das sessões, e prints das telas
 funcionando anexados na entrega.
+
+## Tabelas de Gastos Pós uso de Few-Shot e Zero-Shot (6f666178.. = Zero-Shot / b9e2345d.. = Few-Shot)
+
+![Gastos 1](.Imagens/tabela-pos-fewzero)
+
+![Gastos 2](./Imagens/gastos-pos-fewzxero2)
 
 ---
 
@@ -332,3 +339,34 @@ _[Pedro Paulo Barbosa Arantes - RA: 253622492]_
   arquivo inteiro via `@file`, provavelmente por efeito de cache entre
   turnos — evidência de que "menos texto colado" nem sempre significa
   "menos tokens processados" quando há cache de sessão envolvido.
+
+
+## Passo a passo que seguimos
+
+![Passo 1](./Imagens/passo-a-passo1)
+![Passo 2](./Imagens/passo-a-passo2)
+
+### Curadoria
+
+![Passo 3](./Imagens/passo-a-passoCURADORIA1)
+![Passo 4](./Imagens/passo-a-passoCURADORIA2)
+
+### Few x Zero
+
+![Passo 5](./Imagens/passo-a-passoFEWXZERO1)
+![Passo 6](./Imagens/passo-a-passoFEWXZERO2)
+
+### Decisões system prompt e Técnica prompt
+
+![Passo 7](./Imagens/decisoes-systemprompt)
+![Passo 8](./Imagens/escopo-tecnicaprompt)
+
+## Evolução do Projeto
+
+![Etapa 1](./Imagens/evolucao-projeto1)
+![Etapa 2](./Imagens/evolucao-projeto2)
+![Etapa 3](./Imagens/evolucao-projeto3)
+![Etapa 4](./Imagens/evolucao-projeto4)
+![Etapa 5](./Imagens/evolucao-projeto5)
+![Etapa 6](./Imagens/evolucao-projeto6)
+![Etapa 7](./Imagens/evolucao-projeto7finalizado)
