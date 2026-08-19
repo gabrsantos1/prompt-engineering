@@ -297,7 +297,7 @@ funcionando anexados na entrega.
 
 ## Tabelas de Gastos Pós uso de Few-Shot e Zero-Shot (6f666178.. = Zero-Shot / b9e2345d.. = Few-Shot)
 
-![Gastos 1](./Imagens/tabela-pos-fewxzero.png)
+![Gastos 1](./Imagens/tabela-pos-fewezero.png)
 
 ![Gastos 2](./Imagens/gastos-pos-fewxzero2.png)
 
