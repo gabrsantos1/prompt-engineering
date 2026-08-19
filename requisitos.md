@@ -14,7 +14,7 @@ Engenharia de Prompt e Contexto.
 | `titulo` | texto | sim | |
 | `plataforma` | texto | sim | ex: PC, PS5, Switch |
 | `status` | enum | sim | `quero_jogar` \| `jogando` \| `terminado` |
-| `nota` | número | não | avaliação pessoal (definir escala: 0-10 ou 0-5 estrelas) |
+| `nota` | número | não | avaliação pessoal (0-5 estrelas) |
 | `data_inicio` | data | não | quando começou a jogar |
 | `data_conclusao` | data | não | quando terminou |
 | `capa` | URL/imagem | não | capa do jogo |
