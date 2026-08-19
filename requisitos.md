@@ -48,6 +48,14 @@ Engenharia de Prompt e Contexto.
   estático), sem persistência real nesta fase de MVP.
 - **Tailwind** para estilização.
 - Sem autenticação nesta fase.
+- **Estado 100% client-side (`useState`/Context), sem Server Action para
+  mutação.** Server Actions rodam em funções serverless no Vercel, sem
+  garantia de memória compartilhada entre requisições — mutar o array
+  mockado dentro de uma Server Action funcionaria em dev local, mas
+  resetaria/quebraria em produção. Como o projeto já não tem persistência
+  real neste MVP, o estado fica no navegador durante a sessão (reseta ao
+  dar F5, não sincroniza entre abas) — troca aceita conscientemente, não
+  uma limitação escondida.
 
 *Justificativa: escolha otimizada para simplicidade de setup e para o
 caminho de deploy via Vercel que o grupo já vai seguir no final do projeto.

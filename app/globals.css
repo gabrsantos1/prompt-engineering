@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
+/* Tema escuro único e deliberado — sem variante clara, ver decisão de
+   design registrada na conversa (paleta "estante de jogos"). */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --canvas: #131217;
+  --surface: #1c1b22;
+  --surface-raised: #232129;
+  --border-cor: #2e2c36;
+  --ink: #f2f0ea;
+  --ink-muted: #9a97a6;
+
+  --status-quero: #f2b84b;
+  --status-jogando: #4fc1e9;
+  --status-terminado: #6fcf97;
+
+  --danger: #e5484d;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border-cor);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-status-quero: var(--status-quero);
+  --color-status-jogando: var(--status-jogando);
+  --color-status-terminado: var(--status-terminado);
+
+  --color-danger: var(--danger);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
 }

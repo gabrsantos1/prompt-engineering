@@ -1,18 +1,10 @@
 // Dados mocados de jogos — sem banco de dados nesta fase de MVP
 // (ver requisitos.md, seção "Stack técnica").
+//
+// Versão zero-shot, escolhida pelo grupo como definitiva após o teste de
+// curadoria de contexto/comparação com a versão few-shot.
 
-export type StatusJogo = "quero_jogar" | "jogando" | "terminado";
-
-export interface Jogo {
-  id: string;
-  titulo: string;
-  plataforma: string;
-  status: StatusJogo;
-  nota?: number; // 0 a 5 estrelas — só faz sentido quando status é "terminado"
-  dataInicio?: string;
-  dataConclusao?: string;
-  capa?: string;
-}
+import type { Jogo } from "@/types/jogo";
 
 export const jogosMockados: Jogo[] = [
   {
