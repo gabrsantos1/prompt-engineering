@@ -31,7 +31,10 @@ Engenharia de Prompt e Contexto.
 - CRUD de jogos (criar, editar, remover, listar).
 - Mover jogo entre os três status.
 - Busca por nome do jogo.
-- Ordenação por: data (início/conclusão), nota, ordem alfabética.
+- Ordenação por: **data de início**, **data de conclusão** (dois critérios
+  separados, não um único "data" com fallback entre os dois — um jogo sem
+  a data do critério escolhido vai pro fim da lista, mesmo que tenha a
+  outra data preenchida), nota, ordem alfabética.
 - Estatísticas básicas: total de jogos por status, total concluído.
 
 ## Fora do escopo do MVP (não implementar agora)

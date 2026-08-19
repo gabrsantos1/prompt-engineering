@@ -10,9 +10,16 @@
   --ink: #f2f0ea;
   --ink-muted: #9a97a6;
 
-  --status-quero: #f2b84b;
-  --status-jogando: #4fc1e9;
-  --status-terminado: #6fcf97;
+  /* Paleta categórica validada com scripts/validate_palette.js da skill
+     dataviz (--pairs all, modo dark, surface #131217): lightness band,
+     chroma, separação CVD (protan/deutan/tritan) e contraste — todos OK.
+     As cores originais (âmbar/ciano/verde claros) falhavam a faixa de
+     luminosidade do modo escuro e ficavam indistinguíveis entre si sob
+     daltonismo — troquei mantendo a mesma família de matiz (quente/
+     azul/verde-água) só ajustando luminosidade e saturação. */
+  --status-quero: #d95926;
+  --status-jogando: #3987e5;
+  --status-terminado: #199e70;
 
   --danger: #e5484d;
 }

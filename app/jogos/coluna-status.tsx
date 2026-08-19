@@ -14,9 +14,10 @@ const CONFIG_STATUS: Record<StatusJogo, { titulo: string; dot: string }> = {
 };
 
 export function ColunaStatus({ status }: { status: StatusJogo }) {
-  const { jogos } = useJogos();
-  const jogosDaColuna = jogos.filter((jogo) => jogo.status === status);
+  const { jogosFiltrados, termoBusca } = useJogos();
+  const jogosDaColuna = jogosFiltrados.filter((jogo) => jogo.status === status);
   const { titulo, dot } = CONFIG_STATUS[status];
+  const buscando = termoBusca.trim().length > 0;
 
   return (
     <section className="flex min-w-0 flex-col gap-4">
@@ -33,7 +34,9 @@ export function ColunaStatus({ status }: { status: StatusJogo }) {
       <div className="flex flex-col gap-3">
         {jogosDaColuna.length === 0 ? (
           <p className="rounded-lg border border-dashed border-border px-4 py-6 text-center font-mono text-xs text-ink-muted">
-            Nenhum jogo aqui ainda.
+            {buscando
+              ? `Nenhum jogo encontrado para "${termoBusca.trim()}".`
+              : "Nenhum jogo aqui ainda."}
           </p>
         ) : (
           jogosDaColuna.map((jogo) => <JogoCard key={jogo.id} jogo={jogo} />)

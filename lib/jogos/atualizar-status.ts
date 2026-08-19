@@ -1,4 +1,5 @@
 import type { Jogo, StatusJogo } from "@/types/jogo";
+import { erroConclusaoObrigatoria } from "./regras";
 
 // Dados que só fazem sentido informar quando o novo status é "terminado"
 export interface DadosConclusao {
@@ -29,20 +30,20 @@ export function atualizarStatusJogo(
   dadosConclusao?: DadosConclusao
 ): ResultadoUpdate {
   if (novoStatus === "terminado") {
-    if (!dadosConclusao?.dataConclusao) {
-      return {
-        ok: false,
-        erro: "data_conclusao é obrigatória ao marcar o jogo como terminado.",
-      };
+    const erro = erroConclusaoObrigatoria(novoStatus, dadosConclusao?.dataConclusao);
+    if (erro) {
+      return { ok: false, erro };
     }
 
+    // erroConclusaoObrigatoria só retorna null quando dataConclusao existe,
+    // então dadosConclusao necessariamente está definido aqui.
     return {
       ok: true,
       jogo: {
         ...jogo,
         status: novoStatus,
-        dataConclusao: dadosConclusao.dataConclusao,
-        nota: dadosConclusao.nota ?? jogo.nota,
+        dataConclusao: dadosConclusao!.dataConclusao,
+        nota: dadosConclusao!.nota ?? jogo.nota,
       },
     };
   }
