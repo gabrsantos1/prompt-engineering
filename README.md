@@ -135,7 +135,7 @@ completos de objeto `Jogo` já formatados (few-shot).
 
 ### Zero-shot
 
-_[inserir aqui o print/imagem da geração zero-shot]_
+![Zero-Shot](./Imagens/zero-shot.png)
 
 Gerada sem nenhum exemplo — o modelo decidiu a estrutura do array
 sozinho, com base apenas na interface `Jogo` já definida no projeto.
