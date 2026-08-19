@@ -305,7 +305,7 @@ funcionando anexados na entrega.
 
 ## 6. Link da URL publicada
 
-[ACESSE O SITE][prompt-engineering-red.vercel.app] 
+[ACESSE]: prompt-engineering-red.vercel.app 
 
 ---
 
