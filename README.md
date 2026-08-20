@@ -197,10 +197,11 @@ manualmente no prompt, sem usar `@file`.
 
 ### Resultado da comparação de tokens
 
-![Resultado da Comparacao](./Imagens/relatorio-geral-inicial.png)
-
 Isolando o turno da pergunta-teste (excluindo a mensagem inicial de
 carregamento de contexto, idêntica nas duas sessões):
+
+**6f666178 - contexto reduzido**
+**b9e2345d - contexto completo**
 
 | Métrica | Contexto completo (`@requisitos.md`) | Contexto reduzido (colado) |
 |---|---|---|
@@ -208,6 +209,7 @@ carregamento de contexto, idêntica nas duas sessões):
 | cache write | 1.593 | 2.413 |
 | cache read | 71.389 | 106.348 |
 | **Total de tokens processados** | **75.146** | **112.719** |
+| **Custo estimado** | **$0,0423** | **$0,0705** |
 
 **Resultado contraintuitivo:** o contexto **reduzido** consumiu mais
 tokens que o contexto **completo** via `@requisitos.md` — o oposto do
