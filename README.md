@@ -200,7 +200,7 @@ manualmente no prompt, sem usar `@file`.
 Isolando o turno da pergunta-teste (excluindo a mensagem inicial de
 carregamento de contexto, idêntica nas duas sessões):
 
-**6f666178 - contexto reduzido**
+**6f666178 - contexto reduzido** //
 **b9e2345d - contexto completo**
 
 | Métrica | Contexto completo (`@requisitos.md`) | Contexto reduzido (colado) |
